@@ -1,4 +1,66 @@
 /* Header Starts*/
+
+/* Nav Menu starts */
+.nav-menu {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	align-items: center;
+}
+.nav-bar {
+	display: flex;
+}
+.nav-bar li {
+	list-style: none;
+	margin: 10px;
+}
+.nav-bar li a {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	font-weight: 600;
+	padding: 15px 10px;
+}
+
+/* Nav bar small devices starts*/
+#nav-toggler {
+	display: none;
+}
+.nav-toggler-icon {
+	display: none;
+	color: rgb(0, 0, 0);
+	font-size: 30px;
+}
+@media (max-width: 800px) {
+	.nav-toggler-icon {
+		display: block;
+	}
+	.nav-bar {
+		position: absolute;
+		top: 80px;
+		left: 0;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		background-color: #fff;
+		padding: 20px 0;
+		transform: translateY(-330px);
+		transition: 0.5s ease-in-out;
+	}
+	.nav-bar li a {
+		color: #121212;
+	}
+	#nav-toggler:checked ~ .nav-bar {
+		transform: translateX(0px);
+	}
+}
+/* Nav bar small devices ends*/
+
+/* Nav Menu Ends */
 .container {
 	display: flex;
 	margin: 0 30px;
@@ -161,23 +223,49 @@
 .blog {
 	display: flex;
 }
-.blog .thumbnail img {
-	width: 177px;
-	height: 117px;
-}
-.blog-info {
-	margin-left: 16px;
-}
-.blog-title {
-	font-size: 20px;
-}
-.blog-author {
-	font-size: 16px;
-	color: #9f9f9f;
-}
-.blog-author a {
-	text-decoration: none;
-	font-size: 16px;
-	color: #562eff;
-}
 /* Top blogs */
+/* Course */
+.gadgets {
+	display: grid;
+	grid-gap: 3px;
+	margin-top: 20px;
+	place-items: center;
+}
+.gadgets {
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: center;
+}
+.gadget {
+	box-shadow: 0 0 10px rgb(158, 19, 19);
+	border-radius: 17px;
+	margin: 0 20px;
+	padding: 10px 12px;
+	text-align: justify;
+}
+.filled {
+	color: goldenrod;
+	font-size: 0.8em;
+}
+.unfilled {
+	color: lightgray;
+	font-size: 0.8em;
+}
+.gadget img {
+	width: 200px;
+	height: 150px;
+	justify-content: center;
+}
+.course-info {
+	display: flex;
+}
+@media (max-width: 992px) {
+	.gadgets {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 668px) {
+	.gadgets {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+/* Course */

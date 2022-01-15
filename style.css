@@ -264,8 +264,16 @@ nav {
 	}
 }
 @media (max-width: 668px) {
-	.gadgets {
+	.gadgets,
+	.blogs {
 		grid-template-columns: repeat(1, 1fr);
+	}
+	.continer1,
+	#hero-section {
+		display: block;
+	}
+	.container .col {
+		width: 100%;
 	}
 }
 /* Course */

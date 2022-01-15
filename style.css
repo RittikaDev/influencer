@@ -68,14 +68,6 @@ nav {
 .container .col {
 	width: 50%;
 }
-.container .vertical {
-	border-left: 4px solid rgb(21, 21, 63);
-	border-radius: 10px;
-	height: 76px;
-	position: absolute;
-	margin-left: -12px;
-	margin-top: 29px;
-}
 .container .col1 {
 	margin-top: 7%;
 }
@@ -270,10 +262,14 @@ nav {
 	}
 	.continer1,
 	#hero-section {
-		display: block;
+		display: inline-block;
+		justify-content: center;
 	}
 	.container .col {
 		width: 100%;
+	}
+	.container .col1 {
+		text-align: center;
 	}
 }
 /* Course */
